@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Unity WebGL</title>
+  <title>My project Camera</title>
   <style>
     html, body {
       margin: 0;
@@ -12,28 +12,27 @@
     }
 
     canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: transparent !important;
+      background-color: transparent;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <canvas id="unity-canvas" tabindex="-1"></canvas>
-  <script src="Build/"></script>
+  <canvas id="unity-canvas"></canvas>
+
+  <!-- Use os nomes reais dos arquivos gerados no build -->
+  <script src="Build/export.loader.js"></script>
   <script>
     createUnityInstance(document.querySelector("#unity-canvas"), {
-      dataUrl: "Build/",
-      frameworkUrl: "Build/",
-      codeUrl: "Build/",
+      dataUrl: "Build/export.data",
+      frameworkUrl: "Build/export.framework.js",
+      codeUrl: "Build/export.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "My project Camera",
       productVersion: "0.1",
-      // chave para fundo transparente:
       webglContextAttributes: { alpha: true }
     });
   </script>
