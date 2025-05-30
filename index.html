@@ -4,20 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity Web Player | My project Camera</title>
-    <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: transparent;
-    }
-    canvas {
-      background-color: transparent !important;
-    }
-  </style>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #00000000"></canvas>
+    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
     <script src="Build/export.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -44,6 +33,7 @@
         companyName: "DefaultCompany",
         productName: "My project Camera",
         productVersion: "0.1",
+        webglContextAttributes: { alpha: true },
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
